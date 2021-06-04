@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Insure landing page</title>
+</head>
+<body>
+  <header>
+    <img src="./images/logo.svg" alt="Logo Image">
+    <nav>
+      <img id="openMenu" onclick="openMenu()" src="./images/icon-hamburger.svg" alt="dropmenu">
+      <img id="closeMenu" onclick="closeMenu()" class="hidden" src="./images/icon-close.svg" alt="closemenu">
+      <div id="nav-items">
+        <a href=#>How we work</a>
+        <a href="#">Blog</a>
+        <a href="#">Account</a>
+        <a href="#">View plans</a>
+        <img src="./images/bg-pattern-mobile-nav.svg" alt="waves">
+      </div>
+    </nav>
+  </header>
+
+  <img id="mobileimg" src="./images/image-intro-mobile.jpg" alt="mobile-fam">
+
+  <section id="Humanizing">
+    <!-- mobile waves -->
+    <img id="waveLeftMobile"  src="./images/bg-pattern-intro-left-mobile.svg" alt="left-waves">
+    <img id="waveRightMobile" src="./images/bg-pattern-intro-right-mobile.svg" alt="left-waves">
+    <!-- desktop waves -->
+    <img id="waveLeftDesk" src="./images/bg-pattern-intro-left-desktop.svg" alt="left-waves">
+    <img id="waveRightDesk" src="./images/bg-pattern-intro-right-desktop.svg" alt="left-waves">
+
+    <img id="desktopimg" src="./images/image-intro-desktop.jpg" alt="desktopfam">
+    <div class="stylishline"></div>
+    <div class="section-content">
+
+      <div class="section-header">
+        Humanizing<br /> your insurance.
+      </div>
+      <div class="section-text">
+        Get your life insurance coverage easier and faster. We blend our expertise
+        and technology to help you find the plan that’s right for you. Ensure you
+        and your loved ones are protected.
+      </div>
+
+      <div class="section-btn">
+        VIEW PLANS
+      </div>
+    </div>
+  </section>
+
+  <section id="different">
+
+    <div class="section-header">
+      <div class="stylishline"></div>
+      We’re different
+    </div>
+    <div id="features">
+      <!--SNAPPY PROCESS-->
+      <div class="feature">
+        <img src="./images/icon-snappy-process.svg" alt="snappy bolt">
+        <div class="feature-name">
+          Snappy Process
+        </div>
+        <div class="feature-text">
+          Our application process can be completed in minutes, not hours. Don’t get
+          stuck filling in tedious forms.
+        </div>
+      </div>
+      <!--AFFORDABLE PRICES-->
+      <div class="feature">
+        <img src="./images/icon-affordable-prices.svg" alt="money sign">
+        <div class="feature-name">
+          Affordable Prices
+        </div>
+        <div class="feature-text">
+          We don’t want you worrying about high monthly costs. Our prices may be low,
+          but we still offer the best coverage possible.
+        </div>
+      </div>
+      <!--PEOPLE FIRST-->
+      <div class="feature">
+        <img src="./images/icon-people-first.svg" alt="people first">
+        <div class="feature-name">
+          People First
+        </div>
+        <div class="feature-text">
+          Our plans aren’t full of conditions and clauses to prevent payouts. We make
+          sure you’re covered when you need it.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="find-out-more">
+    <div class="section-content">
+      <div class="section-header">
+        Find out more about how we work
+      </div>
+      <div class="section-btn">
+        How we work
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div id="footer-header">
+      <img id="footerlogo" src="./images/logo.svg" alt="logo">
+      <div class="socialmedia">
+        <img src="./images/icon-facebook.svg" alt="FaceBook">
+        <img src="./images/icon-twitter.svg" alt="Twitter">
+        <img src="./images/icon-pinterest.svg" alt="Pinterest">
+        <img src="./images/icon-instagram.svg" alt="Instagram">
+      </div>
+    </div>
+    <div class="stylishline"></div>
+    <div id="footer-links">
+      <div class="footer-section">
+        <div class="footer-section-header">
+          Our company
+        </div>
+        <div class="footer-section-list">
+          <a href="#">How we work</a>
+          <a href="#">Why Insure?</a>
+          <a href="#">View plans</a>
+          <a href="#">Reviews</a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <div class="footer-section-header">
+          Help me
+        </div>
+        <div class="footer-section-list">
+          <a href="#">FAQ</a>
+          <a href="#">Terms of use</a>
+          <a href="#">Privacy policy</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <div class="footer-section-header">
+          Contact
+        </div>
+        <div class="footer-section-list">
+          <a href="#">Sales</a>
+          <a href="#">Support</a>
+          <a href="#">Live chat</a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <div class="footer-section-header">
+          Others
+        </div>
+
+        <div class="footer-section-list">
+          <a href="#">Careers</a>
+          <a href="#">Press</a>
+          <a href="#">Licenses</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript">
+    const nav = document.getElementById("nav-items");
+    const navbtn = document.getElementById("openMenu");
+    const closebtn = document.getElementById("closeMenu");
+
+    function openMenu(){
+      nav.style.display = "flex";
+      toggleBtn();
+    }
+    function closeMenu(){
+      nav.style.display = "none";
+      toggleBtn();
+    }
+
+    function toggleBtn(){
+      nav.classList.toggle("show-menu");
+      navbtn.classList.toggle("hidden");
+      closebtn.classList.toggle("hidden");
+    }
+  </script>
+</body>
+</html>
